@@ -1,15 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div>
+  <Header @added="addParticipant"/>
+  <h1>
+    
+  </h1>
+
+  <DataTable :participants="participants" />
+  <ChartPie />
+</div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Header from './components/Header.vue'
+import DataTable from './components/DataTable.vue'
+import ChartPie from './components/ChartPie.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    DataTable,
+    ChartPie
+  },
+  data(){
+    return {
+      participants: [],
+    }
+  },
+  methods:{
+    addParticipant(participant){
+      this.participants.push(participant);
+    }
   }
 }
 </script>
