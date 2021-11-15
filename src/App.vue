@@ -17,6 +17,8 @@ import Header from './components/Header.vue'
 import DataTable from './components/DataTable.vue'
 import ChartPie from './components/ChartPie.vue'
 
+
+
 export default {
   name: 'App',
   components: {
